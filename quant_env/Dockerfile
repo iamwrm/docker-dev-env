@@ -15,5 +15,5 @@ ADD conda_common_0.sh /root
 ADD conda_common_1.sh /root
 
 RUN bash /root/download_conda.sh
-RUN bash /root/conda_common_0.sh
-RUN bash /root/conda_common_1.sh
+RUN bash /root/conda_common_0.sh 
+RUN bash /root/conda_common_1.sh 
