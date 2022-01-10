@@ -21,7 +21,7 @@ ENV CONDA=${CONDA_PATH}/bin/conda
 
 RUN \
     wget https://repo.anaconda.com/miniconda/Miniconda3-py37_4.10.3-Linux-x86_64.sh && \
-    bash Miniconda3-py37_4.10.3-Linux-x86_64.sh -b -p ${CONDA_PATH} && \
+    bash Miniconda3-py37_4.10.3-Linux-x86_64.sh -b -p ${CONDA_PATH}
 
 RUN \
     ${CONDA} create -q -n py37env python=3.7.6 && \
