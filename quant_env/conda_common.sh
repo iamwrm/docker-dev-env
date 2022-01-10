@@ -5,6 +5,8 @@ ${CONDA} init bash
 
 bash ${CONDA_PATH}/etc/profile.d/conda.sh 
 
+source /root/.bashrc
+
 ${CONDA} activate py37env
 ${CONDA} info -a
 ${CONDA} list
