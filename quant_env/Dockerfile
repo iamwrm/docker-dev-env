@@ -55,3 +55,18 @@ RUN \
     $CONDA_ROOT/bin/conda clean -y -a -f  && \
     $CONDA_ROOT/bin/conda build purge-all
     # Fix permissions
+
+RUN \
+    conda install -y --update-all \
+        'python='$PYTHON_VERSION \
+        'spyder=5.1.5' \
+        'qt=5.9.7' \
+        'pyqt=5.9.2' \ 
+        'notebook' \
+        'ipython' \
+        # TODO install scipy, numpy, sklearn, and numexpr via conda for mkl optimizaed versions: https://docs.anaconda.com/mkl-optimizations/
+        'scipy' \
+        'numpy' \
+        scikit-learn \
+        matplotlib
+        
