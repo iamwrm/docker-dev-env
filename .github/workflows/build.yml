@@ -10,7 +10,6 @@ jobs:
       fail-fast: false
       matrix:
         image_subdir: ["quant_env"]
-        # image_subdir: ["quant_env","quant_env_anaconda"]
 
     steps:
     - uses: actions/checkout@v2
