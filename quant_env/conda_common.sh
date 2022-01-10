@@ -1,9 +1,13 @@
-${CONDA_PATH}/conda create -q -n py37env python=3.7.6
+CONDA=${CONDA_PATH}/bin/conda
 
-${CONDA_PATH}/conda init bash
+${CONDA} create -q -n py37env python=3.7.6
+${CONDA} init bash
 
-${CONDA_PATH}/conda activate py37env
-${CONDA_PATH}/conda info -a
-${CONDA_PATH}/conda list
+bash ${CONDA_PATH}/etc/profile.d/conda.sh 
+
+${CONDA} activate py37env
+${CONDA} info -a
+${CONDA} list
 
 echo "Conda Python version: $(python --version)"
+echo "Which python version is running: $(which python)"
