@@ -20,7 +20,7 @@ RUN pip3 install conan > /dev/null
 ENV \
     CONDA_ROOT=/opt/conda \
     PYTHON_VERSION="3.7.6" \
-    CONDA_PYTHON_DIR=/opt/conda/lib/python3.7 \
+    CONDA_PYTHON_DIR=/opt/conda/lib/python3.7
 
 RUN \
     pwd && \
