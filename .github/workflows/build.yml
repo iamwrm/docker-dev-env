@@ -3,7 +3,7 @@ name: ci
 on: push
 
 jobs:
-  build_linux_cpp:
+  build_docker_image:
     runs-on: ubuntu-20.04
 
     strategy:
