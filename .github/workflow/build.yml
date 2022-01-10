@@ -1,0 +1,22 @@
+name: ci
+
+on: push
+
+jobs:
+  build_linux_cpp:
+    runs-on: ubuntu-20.04
+
+    strategy:
+      fail-fast: false
+      matrix:
+        image_subdir: ["quant_env"]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: build image
+      run: |
+        cd ${{ matrix.image_subdir }}
+        docker build -t ${{ matrix.image_subdir }} .
+        
+
