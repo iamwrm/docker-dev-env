@@ -1,3 +1,6 @@
+CONDA_PATH=$(cat /tmp/dockerbuild/conda_path.txt)
+CONDA=${CONDA_PATH}/bin/conda
+
 source /root/.bashrc
 
 ${CONDA} activate py37env
