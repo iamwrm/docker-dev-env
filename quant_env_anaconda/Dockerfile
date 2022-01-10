@@ -12,4 +12,4 @@ RUN pip3 install conan
 
 ADD install_conda.sh /root
 
-RUN bash /root/install_conda.sh
+RUN bash /root/download_conda.sh

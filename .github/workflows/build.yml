@@ -19,6 +19,7 @@ jobs:
         PROJECT_DIR=$(pwd)
         cd ${{ matrix.image_subdir }}
         cat ${PROJECT_DIR}/quant_env/conda_common.sh >> download_conda.sh
+        ls 
         docker build -t ${{ matrix.image_subdir }} .
         
 
