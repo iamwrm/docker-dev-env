@@ -8,15 +8,15 @@ ENV \
 
 ## configure apt mirror
 # RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
-RUN apt-get update > /dev/null
-RUN apt-get upgrade -y > /dev/null
+RUN apt-get update 
+RUN apt-get upgrade -y 
 RUN apt-get install -y \
     apt-transport-https ca-certificates curl gnupg2 software-properties-common \
     ssh \
     wget \
     build-essential \
-    python3 python3-pip > /dev/null
-RUN pip3 install conan > /dev/null
+    python3 python3-pip
+RUN pip3 install conan 
 
 
 ENV \
