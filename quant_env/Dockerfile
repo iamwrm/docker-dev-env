@@ -1,5 +1,11 @@
 FROM ubuntu:20.04
 
+ENV \
+    SHELL="/bin/bash" \
+    HOME="/root"  \
+    DISPLAY=":1" \
+    TERM="xterm" \
+
 ## configure apt mirror
 # RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 RUN apt-get update > /dev/null
