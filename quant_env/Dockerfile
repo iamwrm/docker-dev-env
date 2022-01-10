@@ -64,9 +64,13 @@ RUN \
         'pyqt=5.9.2' \ 
         'notebook' \
         'ipython' \
-        # TODO install scipy, numpy, sklearn, and numexpr via conda for mkl optimizaed versions: https://docs.anaconda.com/mkl-optimizations/
         'scipy' \
         'numpy' \
         scikit-learn \
         matplotlib
         
+
+RUN wget --no-verbose https://github.com/krallin/tini/releases/download/v0.19.0/tini -O /tini && \
+    chmod +x /tini
+
+ENTRYPOINT ["/tini", "-g", "--"]
