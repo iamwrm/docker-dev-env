@@ -4,6 +4,7 @@ ENV \
     SHELL="/bin/bash" \
     HOME="/root"  \
     DISPLAY=":1" \
+    DEBIAN_FRONTEND="noninteractive" \
     TERM="xterm"
 
 ## configure apt mirror
