@@ -30,10 +30,6 @@ jobs:
         PROJECT_DIR=$(pwd)
         cd ${{ matrix.image_subdir }}
         ls 
-        docker build -t ${{ matrix.image_subdir }} .
-
-    - name: Docker build
-      run: |
         docker build -t ${{ env.IMAGE_REPO }}/${{ env.IMAGE_NAME }}:${{ matrix.image_subdir }} .
 
     - name: Push docker image
