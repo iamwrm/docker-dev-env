@@ -11,7 +11,7 @@ ENV \
 RUN apt-get update 
 RUN apt-get upgrade -y 
 RUN apt-get install -y apt-transport-https ca-certificates curl gnupg2 software-properties-common ssh 
-RUN apt-get install -y wget 
+RUN apt-get install -y wget vim
 RUN apt-get install -y build-essential 
 RUN apt-get install -y python3 python3-pip 
 RUN pip3 install conan 
