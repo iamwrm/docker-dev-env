@@ -8,13 +8,12 @@ ENV \
     TERM="xterm"
 
 ## configure apt mirror
-# RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 RUN apt-get update 
 RUN apt-get upgrade -y 
-RUN apt-get install -y wget vim
-RUN apt-get install -y python3 python3-pip 
 RUN apt-get install -y --no-install-recommends \
         # This is necessary for apt to access HTTPS sources:
+        python3 \
+        python3-pip \
         apt-transport-https \
         gnupg-agent \
         ssh \
@@ -34,6 +33,7 @@ RUN apt-get install -y --no-install-recommends \
         iproute2 \
         psmisc \
         tmux \
+        vim \
         dpkg-sig \
         uuid-dev \
         csh \
@@ -137,6 +137,8 @@ RUN apt-get install -y --no-install-recommends \
         libbz2-dev \
         liblzma-dev \
         zlib1g-dev
+
+RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 
 RUN pip3 install conan 
 
