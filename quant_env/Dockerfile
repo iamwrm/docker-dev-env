@@ -186,7 +186,7 @@ RUN \
 RUN \
     conda install -y --update-all \
         'python='$PYTHON_VERSION \
-        'spyder=5.1.5' \
+        'spyder=3.*' \
         'qt=5.9.7' \
         'pyqt=5.9.2' \ 
         'notebook' \
