@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_subdir: ["quant_env","archlinux_dev"]
+        image_subdir: ["quant_env","ubuntu_x11"]
 
     steps:
     - uses: actions/checkout@v2
