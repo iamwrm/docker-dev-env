@@ -136,7 +136,12 @@ RUN apt-get install -y --no-install-recommends \
         unp \
         libbz2-dev \
         liblzma-dev \
-        zlib1g-dev
+        zlib1g-dev \
+        # for spyder
+        libgl1 \
+        libxtst6 \
+        libxss1 \
+    	libegl1    
 
 RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 
