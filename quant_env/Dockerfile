@@ -144,6 +144,7 @@ RUN apt-get install -y --no-install-recommends \
     	libegl1    
 
 RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+RUN apt update
 
 RUN pip3 install conan 
 
