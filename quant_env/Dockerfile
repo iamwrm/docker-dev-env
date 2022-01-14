@@ -141,7 +141,12 @@ RUN apt-get install -y --no-install-recommends \
         libgl1 \
         libxtst6 \
         libxss1 \
-    	libegl1    
+        # for spyder3
+    	libegl1 \
+        libxcomposite-dev \
+        libxdamage1 \
+        libxi6
+
 
 RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 RUN apt update
