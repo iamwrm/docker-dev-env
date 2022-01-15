@@ -2,14 +2,9 @@ FROM archlinux:latest
 
 # Configure software
 COPY pacman.conf /etc/pacman.conf
-RUN pacman -Syu --noconfirm
-RUN pacman -S --noconfirm zsh \
-    openssh sudo vi vim git htop time \
-    base-devel cmake ninja gcc clang lld patchelf \
-    perf gperftools \
-    python python-pip 
-RUN pip install conan
-
+RUN pacman -Syu --noconfirm \
+    && pacman -S --noconfirm sudo vim openssh \
+    && yes | pacman -Scc
 COPY mirrorlist /etc/pacman.d/mirrorlist
 
 # Use root to launch sshd
