@@ -201,7 +201,7 @@ RUN \
         'qt=5.9.7' \
         'pyqt=5.9.2' \ 
         'notebook' \
-        'ipython=4.8.2' \
+        'ipython' \
         'scipy' \
         'numpy' \
         scikit-learn \

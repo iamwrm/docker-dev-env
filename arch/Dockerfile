@@ -1,7 +1,6 @@
 FROM archlinux:latest
 
 # Configure software
-# COPY mirrorlist /etc/pacman.d/mirrorlist
 COPY pacman.conf /etc/pacman.conf
 RUN pacman -Syu --noconfirm
 RUN pacman -S --noconfirm zsh \
@@ -10,6 +9,8 @@ RUN pacman -S --noconfirm zsh \
     perf gperftools \
     python python-pip 
 RUN pip install conan
+
+COPY mirrorlist /etc/pacman.d/mirrorlist
 
 # Use root to launch sshd
 CMD ["/usr/sbin/sshd","-D"]
