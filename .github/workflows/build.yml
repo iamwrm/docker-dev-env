@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_subdir: ["quant_env","ubuntu_x11","arch"]
+        image_subdir: ["quant_env","ubuntu_x11","arch","centos7"]
 
     steps:
     - uses: actions/checkout@v2
@@ -27,9 +27,6 @@ jobs:
 
     - name: build image
       run: |
-        PROJECT_DIR=$(pwd)
-        # cd ${{ matrix.image_subdir }}
-        ls 
         docker build -t ${{ env.IMAGE_REPO }}/${{ env.IMAGE_NAME }}:${{ matrix.image_subdir }} ${{ matrix.image_subdir }}
 
     - name: Push docker image
