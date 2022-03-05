@@ -4,7 +4,6 @@ FROM centos:7
 RUN \
     yum update -y \
     && yum install -y --nogpgcheck \
-        epel-release  \
         cmake3 \
         vim \
         wget \
