@@ -12,7 +12,7 @@ RUN yum install -y --nogpgcheck \
         gcc-c++ \
     && yum install -y centos-release-scl \
         devtoolset-11* \
-        rh-python36
+        rh-python36 \
     && scl
 
 # enable cmake
