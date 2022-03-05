@@ -14,7 +14,7 @@ RUN yum install -y --nogpgcheck \
         scl-utils \
         centos-release-scl \
         devtoolset-11* \
-        rh-python36 \
+        rh-python36
 
 # enable cmake
 RUN ln -s /bin/cmake3 /bin/cmake
