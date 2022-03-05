@@ -13,7 +13,7 @@ RUN \
          -e 's|^#baseurl=https\?://download.fedoraproject.org/pub/epel/|baseurl=https://mirrors.ustc.edu.cn/epel/|g' \
          -e 's|^#baseurl=https\?://download.example/pub/epel/|baseurl=https://mirrors.ustc.edu.cn/epel/|g' \
          -i.bak \
-         /etc/yum.repos.d/epel.repo
+         /etc/yum.repos.d/epel.repo \
     && yum install -y --nogpgcheck \
         cmake3 \
         vim \
