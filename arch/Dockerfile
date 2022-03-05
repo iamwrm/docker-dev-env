@@ -10,7 +10,9 @@ RUN pacman -Syu --noconfirm \
         openssh \
         podman \
         fuse-overlayfs \
-    && yes | pacman -Scc
+    && yes | pacman -Scc \
+    && rm -rf /var/cache/pacman/pkg/* 
+
 COPY mirrorlist /etc/pacman.d/mirrorlist
 
 RUN useradd podman; \
