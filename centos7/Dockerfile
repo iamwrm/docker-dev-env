@@ -2,7 +2,7 @@ FROM centos:7
 
 ############################ Base ##############################
 RUN \
-    yun update -y \
+    yum update -y \
     && yum install -y --nogpgcheck \
         epel-release  \
         cmake3 \
