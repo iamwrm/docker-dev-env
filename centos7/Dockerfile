@@ -10,7 +10,8 @@ RUN yum install -y --nogpgcheck \
         make \
         gcc \
         gcc-c++ \
-    && yum install -y centos-release-scl \
+    && yum install -y --nogpgcheck \
+        centos-release-scl \
         devtoolset-11* \
         rh-python36 \
     && scl
