@@ -1,7 +1,9 @@
 FROM centos:7
 
 ############################ Base ##############################
-RUN yum install -y --nogpgcheck \
+RUN \
+    yun update -y \
+    && yum install -y --nogpgcheck \
         epel-release  \
         cmake3 \
         vim \
