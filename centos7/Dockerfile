@@ -37,4 +37,4 @@ RUN scl enable devtoolset-11 "g++ --version"
 
 # install conan
 RUN scl enable rh-python36 "python --version"
-RUN scl enable rh-python36 "pip install conan"
+RUN scl enable rh-python36 "pip install --upgrade pip && pip install conan && conan --version"
