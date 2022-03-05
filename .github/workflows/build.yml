@@ -16,7 +16,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_subdir: ["arch"]
+        # image_subdir: ["quant_env","ubuntu_x11","arch","centos7"]
+        image_subdir: ["centos7"]
+
 
     steps:
     - uses: actions/checkout@v2
@@ -32,3 +34,4 @@ jobs:
     - name: Push docker image
       run: |
         docker push ${{ env.IMAGE_REPO }}/${{ env.IMAGE_NAME }}:${{ matrix.image_subdir }}
+        docker manifest inspect ${{ env.IMAGE_REPO }}/${{ env.IMAGE_NAME }}:${{ matrix.image_subdir }}
